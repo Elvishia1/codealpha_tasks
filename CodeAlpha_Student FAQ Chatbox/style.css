@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eef2f7;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat-container {
+    width: 90%;
+    max-width: 600px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Header */
+
+.chat-header {
+    background: #2563eb;
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.chat-icon {
+    font-size: 35px;
+}
+
+.chat-header h1 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.chat-header p {
+    margin: 5px 0 0;
+    font-size: 14px;
+}
+
+/* Chat area */
+
+#chatBox {
+    height: 400px;
+    padding: 20px;
+    overflow-y: auto;
+    background: #f8fafc;
+}
+
+.bot-message,
+.user-message {
+    max-width: 75%;
+    padding: 12px 15px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    line-height: 1.5;
+}
+
+.bot-message {
+    background: #e5e7eb;
+    color: #222;
+    margin-right: auto;
+}
+
+.user-message {
+    background: #2563eb;
+    color: white;
+    margin-left: auto;
+}
+
+/* Input area */
+
+.input-area {
+    display: flex;
+    gap: 10px;
+    padding: 15px;
+    border-top: 1px solid #ddd;
+    background: white;
+}
+
+#userInput {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+}
+
+#userInput:focus {
+    border-color: #2563eb;
+}
+
+#sendButton {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#sendButton:hover {
+    background: #1d4ed8;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .chat-container {
+        width: 95%;
+    }
+
+    #chatBox {
+        height: 350px;
+    }
+
+    .chat-header h1 {
+        font-size: 19px;
+    }
+
+    .bot-message,
+    .user-message {
+        max-width: 85%;
+    }
+}
